@@ -3,10 +3,10 @@ Using SAP business as our ERP I have implemented the following SQL queries which
 
 ## Inventory
 
-### [Inventory_Control](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Control.sql)
+- [Inventory_Control](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Control.sql)
 The SQL query keeps track of critical items for our company. Critical is defined as items with a defined minimun level quantity(MLQ) by management. It prints the current stock of the items that have a minimun level quantity(MLQ), for an specific warehouse. It Helps to have an overview of the items Based on the current status of them. When the inventory of the stock is lower that the MLQ, is required to order that specific item. The amount to order is evaluated based on the forecas 
 
-### [Inventory_Service_Engineers](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Service_Engineers.sql)
+- [Inventory_Service_Engineers](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Service_Engineers.sql)
 Service engineers are employees that face the customer and commission our equiment on plant or remote. When they travel, the regularly take with them some items and  the company handles the inventory in our ERP as they were warehouses.  
 
 ## Production
