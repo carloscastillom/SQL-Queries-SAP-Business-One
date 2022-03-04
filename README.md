@@ -7,7 +7,7 @@ Using SAP business as our ERP I have implemented the following SQL queries which
 The SQL exhibits the sales orders which have at least one delivery note older than 2010 (can be modified depending of every need). It can be used to calculate our own lead time. the level of granularity is item in the sales order in case of a partial delivery
 
 -Payment Received 
-the query reports the dates of the payments received by customer. The accounting of one of our subsidiary required this for the internal operation 
+the query reports the dates of the payments received by customer. The The sales team of our subsidiary required this for their internal operation 
 
 
 ## Inventory
