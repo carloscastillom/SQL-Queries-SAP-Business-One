@@ -1,7 +1,7 @@
 # SQL Queries - SAP Business One
 Using SAP business as our ERP I have implemented the following SQL queries which are functional for Operations and Sales control. I will explain what every every uploaded query does and why is it useful 
 
-## Inventory_Control
+## [Inventory_Control](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Control.sql)
 The SQL query keeps track of critical items for our company. Critical is defined as items with a defined minimun level quantity(MLQ) by management. It prints the current stock of the items that have a minimun level quantity(MLQ), for an specific warehouse. It Helps to have an overview of the items Based on the current status of them. When the inventory of the stock is lower that the MLQ, is required to order that specific item. The amount to order is evaluated based on the forecas 
 
 ## Open_ProdOrder_Project
