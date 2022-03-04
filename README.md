@@ -1,6 +1,12 @@
 # SQL Queries - SAP Business One
 Using SAP business as our ERP I have implemented the following SQL queries which are functional for Operations and Sales control. I will explain what every every uploaded query does and why is it useful 
 
+## Sales
+
+- [Sales Orders with delivery Notes](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/SalesO_with_DeliveryN.sql)
+The SQL shows exhibits the sales orders which have at least one delivery note older than 2010 (can be modified depending of every need). It can be used to calculate our own lead time. the level of granularity is item in the sales order in case of a partial delivery
+
+
 ## Inventory
 
 - [Inventory_Control](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Control.sql)
