@@ -26,6 +26,4 @@ The SQL Query links tables related to the purchase Order and the delivery time o
 
 
 
-Carlos Castillo
-
 
