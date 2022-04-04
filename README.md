@@ -20,6 +20,15 @@ WHERE T3.TaxDate> '01.01.2010'
 - [Payment Received](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Payment%20Received.sql) 
 the query reports the dates of the payments received by customer. The The sales team of our subsidiary required this for their internal operation 
 
+```
+SELECT T2.[DocDate] AS 'Posting Date',T2.[DocNum] AS 'Document Number',T2.[CardCode] AS 'Customer/Vendor Code', T2.[CardName] AS 'Customer/Vendor Name', T1.[SumApplied], T0.[DocNum], T3.[Country]  
+
+FROM [dbo].[OINV] T0 
+
+INNER JOIN [dbo].[RCT2] T1 ON T1.[DocEntry] = T0.[DocEntry]
+INNER JOIN [dbo].[ORCT] T2 ON T2.[DocNum] = T1.[DocNum]
+INNER JOIN [dbo].[OCRD] T3 ON T3.[CardCode] = T2.[CardCode]
+```
 
 ## Inventory
 
