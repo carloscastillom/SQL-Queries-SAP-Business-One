@@ -106,6 +106,20 @@ WHERE T1.[Status]='P' OR T1.[Status]='R'
 - [Open_Purchase_Order](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Open_Purchase_Order.sql)
 The SQL Query reports the items that the company is waiting on the suppliers to send. It can be used once a week or more frequently depending on the business dynamics. It prints the expected delivery date which helps in controlling the suppliers fulfillment
 
+```
+SELECT T3.DocNum, T0.LineStatus, T0.ItemCode, T0.Dscription, T0.Quantity AS 'Ordered Quantity', T0.OpenQty , T0.ShipDate , T0.BaseCard, T1.CardName, T0.Project, T2.PrjName
+FROM POR1 T0
+LEFT JOIN OCRD T1 
+    ON T0.BaseCard = T1.CardCode
+LEFT JOIN OPRJ T2 
+      ON T0.Project = T2.PrjCode
+LEFT JOIN OPOR T3 
+      ON T0.DocEntry = T3.DocEntry
+
+WHERE T0.LineStatus = 'O'
+ORDER BY  T0.ShipDate
+```
+
 - [Supplier_Lead_Time](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Open_ProdOrder_Project.sql)
 The SQL Query links tables related to the purchase Order and the delivery time of the items. The information is used to calculate the suppliers lead time and a great tool to control the inventory and adjust the item reorder policy
 
