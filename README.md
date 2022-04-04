@@ -54,6 +54,15 @@ ORDER BY T2.[CardName], 'Available Quantity'
 - [Inventory_Service_Engineers](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Inventory_Service_Engineers.sql)
 Service engineers are employees that face the customer and commission our equiment on plant or remote. When they travel, the regularly take with them some items and  the company handles the inventory in our ERP as they were warehouses. The SQL shows the current status of the service engineers. This is helpful to keep track of the inventory.
 
+```
+SELECT T0.[ItemCode], T0.[ItemName], T1.[WhsCode], T1.[OnHand], T2.[WhsName] 
+FROM OITM T0  
+INNER JOIN OITW T1 ON T0.[ItemCode] = T1.[ItemCode] 
+INNER JOIN OWHS T2 ON T1.[WhsCode] = T2.[WhsCode] 
+WHERE T1.[OnHand]>0 AND T1.[WhsCode]>800 AND T1.[WhsCode]<900
+ORDER BY T1.[WhsCode]
+```
+
 ## Production
 
 - [Open_ProdOrder_Project](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/Open_ProdOrder_Project.sql)
