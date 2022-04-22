@@ -1,5 +1,5 @@
 # SQL Queries - SAP Business One
-Using SAP business as our ERP I have implemented the following SQL queries which are functional for Operations and Sales control. I will explain what every uploaded query does and why is it useful for our company 
+Using SAP business as our ERP I have implemented the following SQL queries which are functional for Operations and Sales control. This SQL queries are use maily for reporting. I will explain what every uploaded query does and why is it useful for the company 
 
 ## Sales
 
