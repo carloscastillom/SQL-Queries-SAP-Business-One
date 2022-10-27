@@ -1,6 +1,8 @@
 # SQL Queries - SAP Business One
 Using SAP business as our ERP I have implemented the following SQL queries which are functional for Operations and Sales control. This SQL queries are use maily for reporting. I will explain what every uploaded query does and why is it useful for the company 
 
+https://blogs.sap.com/2016/01/14/sap-business-one-tables/
+
 ## Sales
 
 - [Sales Orders with delivery Notes](https://github.com/carloscastillom/SQL-Queries-SAP-Business-One/blob/main/SalesO_with_DeliveryN.sql)
