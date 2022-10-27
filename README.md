@@ -65,7 +65,7 @@ WHERE T1.[OnHand]>0 AND T1.[WhsCode]>xxx AND T1.[WhsCode]<xxx
 ORDER BY T1.[WhsCode]
 ```
 
--Inventory of Specific group of items
+- Inventory of Specific group of items
 creates a table with the current status of the itmes with the serial numbers that contains a certain string, can also be used with regex as well
 
 ```
