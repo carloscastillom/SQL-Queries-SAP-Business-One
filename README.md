@@ -124,7 +124,7 @@ ORDER BY  T0.ShipDate
 The SQL Query links tables related to the purchase Order and the delivery time of the items. The information is used to calculate the suppliers lead time and a great tool to control the inventory and adjust the item reorder policy
 
 ```
-SELECT T0.DocEntry,  T4.DocDate AS "PO Date", T0.ItemCode, T0.Dscription, T0.Quantity, T0.ShipDate AS "Estimated Delivery Date", T0.BaseCard AS "BP Code", T2.CardName AS "BP Name", T1.DocEntry AS "Goods Receipt Internal ID", T1.Quantity, T1.ActDelDate AS "Goods Receipt Posting Date", T5.taxDate AS "Goods Receipt Document Date", T6.DocEntry
+SELECT T0.DocEntry,  T4.DocDate AS "PO Date", T0.ItemCode,  CAST(T0.Quantity AS int) as Q, T0.ShipDate AS "Estimated Delivery Date", T0.BaseCard AS "BP Code", T2.CardName AS "BP Name", T1.DocEntry AS "Goods Receipt Internal ID", CAST(T1.Quantity AS int) as Q_r, T1.ActDelDate AS "Goods Receipt Posting Date", T5.taxDate AS "Goods Receipt Document Date", T6.DocEntry As Goods_Returned
  FROM 
  POR1 T0 
     LEFT JOIN PDN1 T1 
@@ -137,6 +137,7 @@ SELECT T0.DocEntry,  T4.DocDate AS "PO Date", T0.ItemCode, T0.Dscription, T0.Qua
       ON T1.DocEntry = T5.DocEntry
      LEFT JOIN RPD1 T6 
       ON T1.DocEntry = T6.BaseEntry AND T1.LineNum = T6.BaseLine
+ORDER BY T0.DocEntry
 ```
 
 
