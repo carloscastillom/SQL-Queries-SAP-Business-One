@@ -59,9 +59,20 @@ SELECT T0.[ItemCode], T0.[ItemName], T1.[WhsCode], T1.[OnHand], T2.[WhsName]
 FROM OITM T0  
 INNER JOIN OITW T1 ON T0.[ItemCode] = T1.[ItemCode] 
 INNER JOIN OWHS T2 ON T1.[WhsCode] = T2.[WhsCode] 
-WHERE T1.[OnHand]>0 AND T1.[WhsCode]>800 AND T1.[WhsCode]<900
+WHERE T1.[OnHand]>0 AND T1.[WhsCode]>xxx AND T1.[WhsCode]<xxx
 ORDER BY T1.[WhsCode]
 ```
+
+-Inventory of Specific group of items
+creates a table with the current status of the itmes with the serial numbers that contains a certain string, can also be used with regex as well
+
+```
+SELECT osri.itemcode, OITM.itemName, osri.WhsCode, OSRI.IntrSerial
+from osri LEFT JOIN OITM on OSRI.ItemCode = OITM.ItemCode
+WHERE OSRI.Status = 0 AND OSRI.IntrSerial  LIKE '% x %'
+ORDER BY OSRI.IntrSerial
+```
+
 
 ## Production
 
